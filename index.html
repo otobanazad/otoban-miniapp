@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#071426">
+<title>اتوبان آزاد | VPN</title>
+
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Tahoma, Arial, sans-serif;
+    color: #eef7ff;
+    background:
+        radial-gradient(ellipse at top, #103b69 0%, transparent 55%),
+        linear-gradient(160deg, #050b16, #0b1930 65%, #071426);
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 480px;
+    margin: auto;
+    padding: 22px 16px 35px;
+}
+
+.header {
+    text-align: center;
+    padding: 24px 12px;
+    border: 1px solid #1c75b9;
+    border-radius: 22px;
+    background: linear-gradient(135deg, #102c4c, #071426);
+    box-shadow: 0 0 25px #087bd533;
+}
+
+.logo {
+    width: 76px;
+    height: 76px;
+    margin: 0 auto 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 22px;
+    font-size: 38px;
+    background: linear-gradient(135deg, #00c6ff, #1769ff);
+    box-shadow: 0 0 24px #00aaff55;
+}
+
+h1 {
+    font-size: 25px;
+    margin: 8px 0;
+    color: #fff;
+}
+
+.subtitle {
+    font-size: 13px;
+    color: #a9cce9;
+    line-height: 2;
+}
+
+.status {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 7px 14px;
+    border-radius: 30px;
+    color: #70ffc5;
+    background: #0b493b66;
+    border: 1px solid #168b68;
+    font-size: 12px;
+}
+
+.section-title {
+    margin: 28px 4px 14px;
+    font-size: 17px;
+    color: #cceaff;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.card {
+    min-height: 122px;
+    border-radius: 18px;
+    padding: 17px 10px;
+    text-align: center;
+    border: 1px solid #254b70;
+    background: linear-gradient(145deg, #132b47, #0b1729);
+    color: white;
+    cursor: pointer;
+    font-family: inherit;
+    transition: transform .15s;
+}
+
+.card:active {
+    transform: scale(.97);
+}
+
+.icon {
+    display: block;
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.card strong {
+    font-size: 14px;
+}
+
+.card small {
+    display: block;
+    margin-top: 8px;
+    color: #a6c5e2;
+    font-size: 11px;
+}
+
+.buy {
+    border-color: #00bc78;
+    background: linear-gradient(145deg, #087c59, #064332);
+}
+
+.wallet {
+    border-color: #dca83c;
+    background: linear-gradient(145deg, #62451a, #30230f);
+}
+
+.prices {
+    border-color: #198cf5;
+    background: linear-gradient(145deg, #174e91, #102747);
+}
+
+.tutorial {
+    border-color: #328cff;
+    background: linear-gradient(145deg, #155fba, #103365);
+}
+
+.support {
+    border-color: #735de8;
+    background: linear-gradient(145deg, #40328e, #211b4c);
+}
+
+.invite {
+    border-color: #d05cb5;
+    background: linear-gradient(145deg, #773064, #35182f);
+}
+
+.footer {
+    margin-top: 26px;
+    padding: 18px 10px;
+    text-align: center;
+    color: #7799b9;
+    font-size: 11px;
+    line-height: 2.2;
+}
+
+.footer strong {
+    color: #4bbfff;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+    <header class="header">
+        <div class="logo">🚀</div>
+        <h1>اتوبان آزاد</h1>
+        <div class="subtitle">
+            فروشگاه هوشمند سرویس‌های VPN<br>
+            سریع، آسان و در دسترس
+        </div>
+        <div class="status">● فروشگاه آنلاین اتوبان آزاد</div>
+    </header>
+
+    <h2 class="section-title">⚡ خدمات اتوبان آزاد</h2>
+
+    <main class="grid">
+
+        <button class="card buy" onclick="openSection('buy')">
+            <span class="icon">🛒</span>
+            <strong>خرید سرویس VPN</strong>
+            <small>انتخاب و سفارش سرویس</small>
+        </button>
+
+        <button class="card wallet" onclick="openSection('wallet')">
+            <span class="icon">💰</span>
+            <strong>کیف پول من</strong>
+            <small>موجودی و شارژ کیف پول</small>
+        </button>
+
+        <button class="card prices" onclick="openSection('prices')">
+            <span class="icon">💎</span>
+            <strong>قیمت‌ها و تخفیف‌ها</strong>
+            <small>مشاهده تعرفه سرویس‌ها</small>
+        </button>
+
+        <button class="card tutorial" onclick="openSection('tutorial')">
+            <span class="icon">📚</span>
+            <strong>آموزش راه‌اندازی</strong>
+            <small>راهنمای استفاده از سرویس</small>
+        </button>
+
+        <button class="card invite" onclick="openSection('invite')">
+            <span class="icon">🎁</span>
+            <strong>دعوت از دوستان</strong>
+            <small>معرفی اتوبان آزاد</small>
+        </button>
+
+        <button class="card support" onclick="openSection('support')">
+            <span class="icon">💬</span>
+            <strong>پشتیبانی</strong>
+            <small>ارتباط با پشتیبانی</small>
+        </button>
+
+    </main>
+
+    <footer class="footer">
+        <strong>OTOBAN AZAD</strong><br>
+        تجربه‌ای ساده‌تر در خرید سرویس VPN<br>
+        © اتوبان آزاد
+    </footer>
+
+</div>
+
+<script>
+const tg = window.Telegram.WebApp;
+
+tg.ready();
+tg.expand();
+
+function openSection(section) {
+    const actions = {
+        buy: "buy",
+        wallet: "wallet",
+        prices: "prices",
+        tutorial: "tutorial",
+        invite: "invite",
+        support: "support"
+    };
+
+    const action = actions[section];
+
+    if (!action) return;
+
+    if (tg.initData) {
+        tg.sendData(action);
+    } else {
+        alert("برای استفاده از این بخش، مینی‌اپ را از داخل ربات اتوبان آزاد باز کنید.");
+    }
+}
+</script>
+
+</body>
+</html>
